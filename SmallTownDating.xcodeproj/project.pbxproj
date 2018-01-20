@@ -1,0 +1,575 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		260ECE702012EE1200E4660D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 260ECE6F2012EE1200E4660D /* AppDelegate.swift */; };
+		260ECE722012EE1200E4660D /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 260ECE712012EE1200E4660D /* GameScene.sks */; };
+		260ECE742012EE1200E4660D /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = 260ECE732012EE1200E4660D /* Actions.sks */; };
+		260ECE762012EE1200E4660D /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 260ECE752012EE1200E4660D /* GameScene.swift */; };
+		260ECE782012EE1300E4660D /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 260ECE772012EE1300E4660D /* GameViewController.swift */; };
+		260ECE7B2012EE1300E4660D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 260ECE792012EE1300E4660D /* Main.storyboard */; };
+		260ECE7D2012EE1300E4660D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 260ECE7C2012EE1300E4660D /* Assets.xcassets */; };
+		260ECE802012EE1300E4660D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 260ECE7E2012EE1300E4660D /* LaunchScreen.storyboard */; };
+		260ECE8B2012EE1300E4660D /* SmallTownDatingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 260ECE8A2012EE1300E4660D /* SmallTownDatingTests.swift */; };
+		260ECE962012EE1300E4660D /* SmallTownDatingUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 260ECE952012EE1300E4660D /* SmallTownDatingUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		260ECE872012EE1300E4660D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 260ECE642012EE1200E4660D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 260ECE6B2012EE1200E4660D;
+			remoteInfo = SmallTownDating;
+		};
+		260ECE922012EE1300E4660D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 260ECE642012EE1200E4660D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 260ECE6B2012EE1200E4660D;
+			remoteInfo = SmallTownDating;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		260ECE6C2012EE1200E4660D /* SmallTownDating.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SmallTownDating.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		260ECE6F2012EE1200E4660D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		260ECE712012EE1200E4660D /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
+		260ECE732012EE1200E4660D /* Actions.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Actions.sks; sourceTree = "<group>"; };
+		260ECE752012EE1200E4660D /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
+		260ECE772012EE1300E4660D /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
+		260ECE7A2012EE1300E4660D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		260ECE7C2012EE1300E4660D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		260ECE7F2012EE1300E4660D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		260ECE812012EE1300E4660D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		260ECE862012EE1300E4660D /* SmallTownDatingTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SmallTownDatingTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		260ECE8A2012EE1300E4660D /* SmallTownDatingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmallTownDatingTests.swift; sourceTree = "<group>"; };
+		260ECE8C2012EE1300E4660D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		260ECE912012EE1300E4660D /* SmallTownDatingUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SmallTownDatingUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		260ECE952012EE1300E4660D /* SmallTownDatingUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmallTownDatingUITests.swift; sourceTree = "<group>"; };
+		260ECE972012EE1300E4660D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		260ECE692012EE1200E4660D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		260ECE832012EE1300E4660D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		260ECE8E2012EE1300E4660D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		260ECE632012EE1200E4660D = {
+			isa = PBXGroup;
+			children = (
+				260ECE6E2012EE1200E4660D /* SmallTownDating */,
+				260ECE892012EE1300E4660D /* SmallTownDatingTests */,
+				260ECE942012EE1300E4660D /* SmallTownDatingUITests */,
+				260ECE6D2012EE1200E4660D /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		260ECE6D2012EE1200E4660D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				260ECE6C2012EE1200E4660D /* SmallTownDating.app */,
+				260ECE862012EE1300E4660D /* SmallTownDatingTests.xctest */,
+				260ECE912012EE1300E4660D /* SmallTownDatingUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		260ECE6E2012EE1200E4660D /* SmallTownDating */ = {
+			isa = PBXGroup;
+			children = (
+				260ECE6F2012EE1200E4660D /* AppDelegate.swift */,
+				260ECE712012EE1200E4660D /* GameScene.sks */,
+				260ECE732012EE1200E4660D /* Actions.sks */,
+				260ECE752012EE1200E4660D /* GameScene.swift */,
+				260ECE772012EE1300E4660D /* GameViewController.swift */,
+				260ECE792012EE1300E4660D /* Main.storyboard */,
+				260ECE7C2012EE1300E4660D /* Assets.xcassets */,
+				260ECE7E2012EE1300E4660D /* LaunchScreen.storyboard */,
+				260ECE812012EE1300E4660D /* Info.plist */,
+			);
+			path = SmallTownDating;
+			sourceTree = "<group>";
+		};
+		260ECE892012EE1300E4660D /* SmallTownDatingTests */ = {
+			isa = PBXGroup;
+			children = (
+				260ECE8A2012EE1300E4660D /* SmallTownDatingTests.swift */,
+				260ECE8C2012EE1300E4660D /* Info.plist */,
+			);
+			path = SmallTownDatingTests;
+			sourceTree = "<group>";
+		};
+		260ECE942012EE1300E4660D /* SmallTownDatingUITests */ = {
+			isa = PBXGroup;
+			children = (
+				260ECE952012EE1300E4660D /* SmallTownDatingUITests.swift */,
+				260ECE972012EE1300E4660D /* Info.plist */,
+			);
+			path = SmallTownDatingUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		260ECE6B2012EE1200E4660D /* SmallTownDating */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 260ECE9A2012EE1300E4660D /* Build configuration list for PBXNativeTarget "SmallTownDating" */;
+			buildPhases = (
+				260ECE682012EE1200E4660D /* Sources */,
+				260ECE692012EE1200E4660D /* Frameworks */,
+				260ECE6A2012EE1200E4660D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SmallTownDating;
+			productName = SmallTownDating;
+			productReference = 260ECE6C2012EE1200E4660D /* SmallTownDating.app */;
+			productType = "com.apple.product-type.application";
+		};
+		260ECE852012EE1300E4660D /* SmallTownDatingTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 260ECE9D2012EE1300E4660D /* Build configuration list for PBXNativeTarget "SmallTownDatingTests" */;
+			buildPhases = (
+				260ECE822012EE1300E4660D /* Sources */,
+				260ECE832012EE1300E4660D /* Frameworks */,
+				260ECE842012EE1300E4660D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				260ECE882012EE1300E4660D /* PBXTargetDependency */,
+			);
+			name = SmallTownDatingTests;
+			productName = SmallTownDatingTests;
+			productReference = 260ECE862012EE1300E4660D /* SmallTownDatingTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		260ECE902012EE1300E4660D /* SmallTownDatingUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 260ECEA02012EE1300E4660D /* Build configuration list for PBXNativeTarget "SmallTownDatingUITests" */;
+			buildPhases = (
+				260ECE8D2012EE1300E4660D /* Sources */,
+				260ECE8E2012EE1300E4660D /* Frameworks */,
+				260ECE8F2012EE1300E4660D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				260ECE932012EE1300E4660D /* PBXTargetDependency */,
+			);
+			name = SmallTownDatingUITests;
+			productName = SmallTownDatingUITests;
+			productReference = 260ECE912012EE1300E4660D /* SmallTownDatingUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		260ECE642012EE1200E4660D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0920;
+				LastUpgradeCheck = 0920;
+				ORGANIZATIONNAME = "Sarah Smith";
+				TargetAttributes = {
+					260ECE6B2012EE1200E4660D = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+					260ECE852012EE1300E4660D = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 260ECE6B2012EE1200E4660D;
+					};
+					260ECE902012EE1300E4660D = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 260ECE6B2012EE1200E4660D;
+					};
+				};
+			};
+			buildConfigurationList = 260ECE672012EE1200E4660D /* Build configuration list for PBXProject "SmallTownDating" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 260ECE632012EE1200E4660D;
+			productRefGroup = 260ECE6D2012EE1200E4660D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				260ECE6B2012EE1200E4660D /* SmallTownDating */,
+				260ECE852012EE1300E4660D /* SmallTownDatingTests */,
+				260ECE902012EE1300E4660D /* SmallTownDatingUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		260ECE6A2012EE1200E4660D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				260ECE7B2012EE1300E4660D /* Main.storyboard in Resources */,
+				260ECE722012EE1200E4660D /* GameScene.sks in Resources */,
+				260ECE7D2012EE1300E4660D /* Assets.xcassets in Resources */,
+				260ECE802012EE1300E4660D /* LaunchScreen.storyboard in Resources */,
+				260ECE742012EE1200E4660D /* Actions.sks in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		260ECE842012EE1300E4660D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		260ECE8F2012EE1300E4660D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		260ECE682012EE1200E4660D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				260ECE762012EE1200E4660D /* GameScene.swift in Sources */,
+				260ECE782012EE1300E4660D /* GameViewController.swift in Sources */,
+				260ECE702012EE1200E4660D /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		260ECE822012EE1300E4660D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				260ECE8B2012EE1300E4660D /* SmallTownDatingTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		260ECE8D2012EE1300E4660D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				260ECE962012EE1300E4660D /* SmallTownDatingUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		260ECE882012EE1300E4660D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 260ECE6B2012EE1200E4660D /* SmallTownDating */;
+			targetProxy = 260ECE872012EE1300E4660D /* PBXContainerItemProxy */;
+		};
+		260ECE932012EE1300E4660D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 260ECE6B2012EE1200E4660D /* SmallTownDating */;
+			targetProxy = 260ECE922012EE1300E4660D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		260ECE792012EE1300E4660D /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				260ECE7A2012EE1300E4660D /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		260ECE7E2012EE1300E4660D /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				260ECE7F2012EE1300E4660D /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		260ECE982012EE1300E4660D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		260ECE992012EE1300E4660D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		260ECE9B2012EE1300E4660D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4563WH9VE2;
+				INFOPLIST_FILE = SmallTownDating/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = au.com.smithsoft.SmallTownDating;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		260ECE9C2012EE1300E4660D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4563WH9VE2;
+				INFOPLIST_FILE = SmallTownDating/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = au.com.smithsoft.SmallTownDating;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		260ECE9E2012EE1300E4660D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4563WH9VE2;
+				INFOPLIST_FILE = SmallTownDatingTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = au.com.smithsoft.SmallTownDatingTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SmallTownDating.app/SmallTownDating";
+			};
+			name = Debug;
+		};
+		260ECE9F2012EE1300E4660D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4563WH9VE2;
+				INFOPLIST_FILE = SmallTownDatingTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = au.com.smithsoft.SmallTownDatingTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SmallTownDating.app/SmallTownDating";
+			};
+			name = Release;
+		};
+		260ECEA12012EE1300E4660D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4563WH9VE2;
+				INFOPLIST_FILE = SmallTownDatingUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = au.com.smithsoft.SmallTownDatingUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = SmallTownDating;
+			};
+			name = Debug;
+		};
+		260ECEA22012EE1300E4660D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4563WH9VE2;
+				INFOPLIST_FILE = SmallTownDatingUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = au.com.smithsoft.SmallTownDatingUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = SmallTownDating;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		260ECE672012EE1200E4660D /* Build configuration list for PBXProject "SmallTownDating" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				260ECE982012EE1300E4660D /* Debug */,
+				260ECE992012EE1300E4660D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		260ECE9A2012EE1300E4660D /* Build configuration list for PBXNativeTarget "SmallTownDating" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				260ECE9B2012EE1300E4660D /* Debug */,
+				260ECE9C2012EE1300E4660D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		260ECE9D2012EE1300E4660D /* Build configuration list for PBXNativeTarget "SmallTownDatingTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				260ECE9E2012EE1300E4660D /* Debug */,
+				260ECE9F2012EE1300E4660D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		260ECEA02012EE1300E4660D /* Build configuration list for PBXNativeTarget "SmallTownDatingUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				260ECEA12012EE1300E4660D /* Debug */,
+				260ECEA22012EE1300E4660D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 260ECE642012EE1200E4660D /* Project object */;
+}
