@@ -9,8 +9,58 @@
 import SpriteKit
 import GameplayKit
 
-class GameScene: SKScene {
+extension SKNode {
     
+    func dump(indent: Int = 0)
+    {
+        let indentSpace = String(repeating: " ", count: indent)
+        print(indentSpace + "\(self)")
+        for c in children
+        {
+            c.dump(indent: indent + 4)
+        }
+    }
+    
+}
+
+extension GameScene: ButtonResponder
+{
+    func wasTapped(button: Button) {
+        if button.name == "leftButton"
+        {
+            if focussedFriend < friends.count - 1
+            {
+                select(friendIndex: focussedFriend + 1)
+            }
+        }
+        else if button.name == "rightButton"
+        {
+            if focussedFriend > 0
+            {
+                select(friendIndex: focussedFriend - 1)
+            }
+        }
+    }
+    
+    func setupButtons()
+    {
+        let leftButton = childNode(withName: "leftButton") as! Button
+        let rightButton = childNode(withName: "rightButton") as! Button
+        leftButton.delegate = self
+        rightButton.delegate = self
+        leftButton.loadView()
+        rightButton.loadView()
+        leftButton.buttonNotation.fontName = "Nunito-Semibold.ttf"
+        rightButton.buttonNotation.fontName = "Nunito-Semibold.ttf"
+        leftButton.buttonNotation.text = "<"
+        rightButton.buttonNotation.text = ">"
+        
+        self.dump()
+    }
+}
+
+class GameScene: SKScene
+{
     var entities = [GKEntity]()
     var graphs = [String : GKGraph]()
     
@@ -18,61 +68,46 @@ class GameScene: SKScene {
     private var label : SKLabelNode?
     private var spinnyNode : SKShapeNode?
     
+    private var focussedFriend = 2
+    
+    private var friendViewSpan: CGFloat = 0.0
+    private var selectorIsAnimating = false
+    
+    var friends = loadFriendData()
+    
+    weak private var slider: SKNode!
+    
     override func sceneDidLoad() {
 
         self.lastUpdateTime = 0
-        
-        // Get label node from scene and store it for use later
-        self.label = self.childNode(withName: "//helloLabel") as? SKLabelNode
-        if let label = self.label {
-            label.alpha = 0.0
-            label.run(SKAction.fadeIn(withDuration: 2.0))
-        }
-        
-        // Create shape node to use during mouse interaction
-        let w = (self.size.width + self.size.height) * 0.05
-        self.spinnyNode = SKShapeNode.init(rectOf: CGSize.init(width: w, height: w), cornerRadius: w * 0.3)
-        
-        if let spinnyNode = self.spinnyNode {
-            spinnyNode.lineWidth = 2.5
-            
-            spinnyNode.run(SKAction.repeatForever(SKAction.rotate(byAngle: CGFloat(Double.pi), duration: 1)))
-            spinnyNode.run(SKAction.sequence([SKAction.wait(forDuration: 0.5),
-                                              SKAction.fadeOut(withDuration: 0.5),
-                                              SKAction.removeFromParent()]))
+
+        setupFriendsDisplay()
+        setupButtons()
+    }
+    
+    func select(friendIndex friend: Int)
+    {
+        if selectorIsAnimating { return }
+        let delta = friendViewSpan * CGFloat(focussedFriend - friend)
+        let sliderAction = SKAction.moveBy(x: delta, y: 0.0, duration: 0.3)
+        sliderAction.timingMode = .easeInEaseOut
+        selectorIsAnimating = true
+        slider.run(sliderAction) {[unowned self] in
+            self.selectorIsAnimating = false
+            self.focussedFriend = friend
         }
     }
     
-    
     func touchDown(atPoint pos : CGPoint) {
-        if let n = self.spinnyNode?.copy() as! SKShapeNode? {
-            n.position = pos
-            n.strokeColor = SKColor.green
-            self.addChild(n)
-        }
     }
     
     func touchMoved(toPoint pos : CGPoint) {
-        if let n = self.spinnyNode?.copy() as! SKShapeNode? {
-            n.position = pos
-            n.strokeColor = SKColor.blue
-            self.addChild(n)
-        }
     }
     
     func touchUp(atPoint pos : CGPoint) {
-        if let n = self.spinnyNode?.copy() as! SKShapeNode? {
-            n.position = pos
-            n.strokeColor = SKColor.red
-            self.addChild(n)
-        }
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        if let label = self.label {
-            label.run(SKAction.init(named: "Pulse")!, withKey: "fadeInOut")
-        }
-        
         for t in touches { self.touchDown(atPoint: t.location(in: self)) }
     }
     
@@ -106,5 +141,25 @@ class GameScene: SKScene {
         }
         
         self.lastUpdateTime = currentTime
+    }
+    
+    // Friends display
+    func setupFriendsDisplay()
+    {
+        let clipNode = childNode(withName: "friendSliderCropNode") as! SKCropNode
+        let clipZone = clipNode.childNode(withName: "friendSliderView") as! SKSpriteNode
+        slider = clipNode.childNode(withName: "slider")!
+        clipZone.removeFromParent()
+        clipNode.maskNode = clipZone
+        let friendNodes = slider.children
+        let friendsSorted = friendNodes.sorted { $0.position.x < $1.position.x }
+        let lastIndex = friendsSorted.count - 1
+        friendViewSpan = friendsSorted[lastIndex].position.x - friendsSorted[lastIndex - 1].position.x
+        for friend in friendNodes.enumerated() {
+            let friendView = friend.element.childNode(withName: "//friendView") as! FriendView
+            let friendRecord = friends[friend.offset]
+            friendView.loadView()
+            friendView.friendName = friendRecord.friendName
+        }
     }
 }

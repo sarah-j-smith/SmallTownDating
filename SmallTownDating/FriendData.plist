@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>personality</key>
+		<string>Easy-going</string>
+		<key>friendName</key>
+		<string>Joe</string>
+		<key>decreaseMax</key>
+		<integer>1</integer>
+		<key>decreaseMin</key>
+		<integer>0</integer>
+		<key>moodBarSize</key>
+		<integer>6</integer>
+		<key>barStart</key>
+		<integer>3</integer>
+	</dict>
+	<dict>
+		<key>personality</key>
+		<string>Sensitive</string>
+		<key>friendName</key>
+		<string>Robin</string>
+		<key>decreaseMax</key>
+		<integer>1</integer>
+		<key>decreaseMin</key>
+		<integer>1</integer>
+		<key>moodBarSize</key>
+		<integer>4</integer>
+		<key>barStart</key>
+		<integer>2</integer>
+	</dict>
+	<dict>
+		<key>personality</key>
+		<string>Eratic</string>
+		<key>friendName</key>
+		<string>Eratic</string>
+		<key>decreaseMax</key>
+		<integer>3</integer>
+		<key>decreaseMin</key>
+		<integer>-1</integer>
+		<key>moodBarSize</key>
+		<integer>5</integer>
+		<key>barStart</key>
+		<integer>2</integer>
+	</dict>
+	<dict>
+		<key>personality</key>
+		<string>Socially Needy</string>
+		<key>friendName</key>
+		<string>Socially Needy</string>
+		<key>decreaseMax</key>
+		<integer>2</integer>
+		<key>decreaseMin</key>
+		<integer>1</integer>
+		<key>moodBarSize</key>
+		<integer>5</integer>
+		<key>barStart</key>
+		<integer>2</integer>
+	</dict>
+	<dict>
+		<key>personality</key>
+		<string>Lover</string>
+		<key>friendName</key>
+		<string>Lover</string>
+		<key>decreaseMax</key>
+		<integer>2</integer>
+		<key>decreaseMin</key>
+		<integer>1</integer>
+		<key>moodBarSize</key>
+		<integer>6</integer>
+		<key>barStart</key>
+		<integer>4</integer>
+	</dict>
+</array>
+</plist>
