@@ -19,6 +19,8 @@
 		260ECEA42012F1E200E4660D /* FriendView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 260ECEA32012F1E200E4660D /* FriendView.swift */; };
 		260ECEA62012FE4600E4660D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 260ECEA52012FE4600E4660D /* Assets.xcassets */; };
 		260ECEA82013033000E4660D /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = 260ECEA72013033000E4660D /* Button.swift */; };
+		265490AB201445DF005865D4 /* FriendManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265490AA201445DF005865D4 /* FriendManager.swift */; };
+		265490AD20144819005865D4 /* FriendData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265490AC20144819005865D4 /* FriendData.swift */; };
 		26737097201339E800442BFB /* MoodBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26737096201339E800442BFB /* MoodBar.swift */; };
 		2673709920133BD700442BFB /* FriendView.sks in Resources */ = {isa = PBXBuildFile; fileRef = 2673709820133BD700442BFB /* FriendView.sks */; };
 		2673709B2013432600442BFB /* FriendData.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2673709A2013432600442BFB /* FriendData.plist */; };
@@ -28,6 +30,7 @@
 		267370A5201375C900442BFB /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 267370A4201375C900442BFB /* Default-568h@2x.png */; };
 		267370A72014162500442BFB /* DatingScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 267370A62014162500442BFB /* DatingScene.sks */; };
 		267370A9201419E600442BFB /* DatingScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 267370A8201419E600442BFB /* DatingScene.swift */; };
+		267370AC2014221700442BFB /* Perleper.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 267370AB2014221700442BFB /* Perleper.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +69,8 @@
 		260ECEA32012F1E200E4660D /* FriendView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendView.swift; sourceTree = "<group>"; };
 		260ECEA52012FE4600E4660D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		260ECEA72013033000E4660D /* Button.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Button.swift; sourceTree = "<group>"; };
+		265490AA201445DF005865D4 /* FriendManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendManager.swift; sourceTree = "<group>"; };
+		265490AC20144819005865D4 /* FriendData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendData.swift; sourceTree = "<group>"; };
 		26737096201339E800442BFB /* MoodBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodBar.swift; sourceTree = "<group>"; };
 		2673709820133BD700442BFB /* FriendView.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = FriendView.sks; sourceTree = "<group>"; };
 		2673709A2013432600442BFB /* FriendData.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = FriendData.plist; sourceTree = "<group>"; };
@@ -75,6 +80,8 @@
 		267370A4201375C900442BFB /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		267370A62014162500442BFB /* DatingScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = DatingScene.sks; sourceTree = "<group>"; };
 		267370A8201419E600442BFB /* DatingScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatingScene.swift; sourceTree = "<group>"; };
+		267370AA20141DDC00442BFB /* Mockup.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Mockup.png; path = ../../HeartBeat_Art/Mockup.png; sourceTree = "<group>"; };
+		267370AB2014221700442BFB /* Perleper.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Perleper.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -134,6 +141,7 @@
 				260ECE752012EE1200E4660D /* GameScene.swift */,
 				260ECE772012EE1300E4660D /* GameViewController.swift */,
 				2673709820133BD700442BFB /* FriendView.sks */,
+				267370AA20141DDC00442BFB /* Mockup.png */,
 				260ECEA32012F1E200E4660D /* FriendView.swift */,
 				260ECEA72013033000E4660D /* Button.swift */,
 				267370A220135E5B00442BFB /* Button.sks */,
@@ -141,6 +149,8 @@
 				2673709A2013432600442BFB /* FriendData.plist */,
 				267370A62014162500442BFB /* DatingScene.sks */,
 				267370A8201419E600442BFB /* DatingScene.swift */,
+				265490AA201445DF005865D4 /* FriendManager.swift */,
+				265490AC20144819005865D4 /* FriendData.swift */,
 			);
 			path = SmallTownDating;
 			sourceTree = "<group>";
@@ -169,6 +179,7 @@
 				260ECEA52012FE4600E4660D /* Assets.xcassets */,
 				2673709F20135CB500442BFB /* Nunito-SemiBold.ttf */,
 				2673709D20135C7100442BFB /* Nunito-Black.ttf */,
+				267370AB2014221700442BFB /* Perleper.xcassets */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -291,6 +302,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2673709920133BD700442BFB /* FriendView.sks in Resources */,
+				267370AC2014221700442BFB /* Perleper.xcassets in Resources */,
 				260ECE7B2012EE1300E4660D /* Main.storyboard in Resources */,
 				260ECE722012EE1200E4660D /* GameScene.sks in Resources */,
 				267370A320135E5B00442BFB /* Button.sks in Resources */,
@@ -327,11 +339,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				260ECEA82013033000E4660D /* Button.swift in Sources */,
+				265490AB201445DF005865D4 /* FriendManager.swift in Sources */,
 				267370A9201419E600442BFB /* DatingScene.swift in Sources */,
 				260ECE762012EE1200E4660D /* GameScene.swift in Sources */,
 				26737097201339E800442BFB /* MoodBar.swift in Sources */,
 				260ECE782012EE1300E4660D /* GameViewController.swift in Sources */,
 				260ECEA42012F1E200E4660D /* FriendView.swift in Sources */,
+				265490AD20144819005865D4 /* FriendData.swift in Sources */,
 				260ECE702012EE1200E4660D /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

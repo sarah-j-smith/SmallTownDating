@@ -9,18 +9,6 @@
 import UIKit
 import SpriteKit
 
-struct FriendData: Decodable
-{
-    typealias FriendList = [FriendData]
-    
-    let personality: String
-    let friendName: String
-    let decreaseMax: Float
-    let decreaseMin: Float
-    let moodBarSize: Int
-    let barStart: Int
-}
-
 func loadFriendData() -> [ FriendData ]
 {
     var results: [ FriendData ] = []
@@ -45,6 +33,9 @@ func loadFriendData() -> [ FriendData ]
 class FriendView: SKSpriteNode
 {
     static let FRIEND_VIEW_MARGINS = CGSize(width: 25, height: 25)
+    
+    static let HEART_TEX = SKTexture(image: #imageLiteral(resourceName: "heart0001"))
+    static let NO_HEART_TEX = SKTexture(image: #imageLiteral(resourceName: "heart0002"))
     
     weak var moodBar: MoodBar!
     
@@ -74,16 +65,37 @@ class FriendView: SKSpriteNode
         }
     }
     
+    func setHeart(score: Int)
+    {
+        let scoreBar = childNode(withName: "scoreBar")!
+        let heart1 = scoreBar.childNode(withName: "heart1") as! SKSpriteNode
+        let heart2 = scoreBar.childNode(withName: "heart2") as! SKSpriteNode
+        let heart3 = scoreBar.childNode(withName: "heart3") as! SKSpriteNode
+        heart1.texture = score > 0 ? FriendView.HEART_TEX : FriendView.NO_HEART_TEX
+        heart2.texture = score > 1 ? FriendView.HEART_TEX : FriendView.NO_HEART_TEX
+        heart3.texture = score > 2 ? FriendView.HEART_TEX : FriendView.NO_HEART_TEX
+    }
+    
     private weak var friendNameLabel: SKLabelNode!
     private weak var characterPortrait: SKSpriteNode!
  
-    func loadView()
+    func loadView(withData friendData: FriendData)
     {
         characterPortrait = childNode(withName: "portrait") as! SKSpriteNode
         friendNameLabel = childNode(withName: "friendName") as! SKLabelNode
         
         moodBar = childNode(withName: "//moodBarFrame") as! MoodBar
         moodBar.loadView()
+        
+        friendName = friendData.friendName
+        moodBar.moodNodeCount = friendData.moodBarSize
+        moodBar.currentMood = friendData.barStart
+        
+        let portraitName = "cardCharacterPerlerper000\(friendData.barStart)"
+        let tex = SKTexture(imageNamed: portraitName)
+        print("Tex sz: \(tex.size())")
+        //portrait = tex
+        characterPortrait.texture = tex
     }
 
 }

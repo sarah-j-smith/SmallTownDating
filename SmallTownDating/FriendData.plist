@@ -32,9 +32,9 @@
 	</dict>
 	<dict>
 		<key>personality</key>
-		<string>Eratic</string>
+		<string>Erratic</string>
 		<key>friendName</key>
-		<string>Eratic</string>
+		<string>Riley</string>
 		<key>decreaseMax</key>
 		<integer>3</integer>
 		<key>decreaseMin</key>
@@ -48,7 +48,7 @@
 		<key>personality</key>
 		<string>Socially Needy</string>
 		<key>friendName</key>
-		<string>Socially Needy</string>
+		<string>Addison</string>
 		<key>decreaseMax</key>
 		<integer>2</integer>
 		<key>decreaseMin</key>
@@ -62,7 +62,7 @@
 		<key>personality</key>
 		<string>Lover</string>
 		<key>friendName</key>
-		<string>Lover</string>
+		<string>Quinn</string>
 		<key>decreaseMax</key>
 		<integer>2</integer>
 		<key>decreaseMin</key>

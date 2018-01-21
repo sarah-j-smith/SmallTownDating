@@ -57,7 +57,7 @@ extension GameScene: ButtonResponder
     func wasTapped(button: Button) {
         if button.name == "leftButton"
         {
-            if focussedFriend < friends.count - 1
+            if focussedFriend < FriendManager.shared.friends.count - 1
             {
                 select(friendIndex: focussedFriend + 1)
             }
@@ -79,17 +79,17 @@ extension GameScene: ButtonResponder
     {
         let leftButton = childNode(withName: "leftButton") as! Button
         let rightButton = childNode(withName: "rightButton") as! Button
+        leftButton.downName = "arrow_left"
         leftButton.delegate = self
         rightButton.delegate = self
+        rightButton.downName = "arrow_right"
         leftButton.loadView()
         rightButton.loadView()
-        leftButton.buttonNotation.fontName = "Nunito-SemiBold"
-        rightButton.buttonNotation.fontName = "Nunito-SemiBold"
-        leftButton.buttonNotation.text = "<"
-        rightButton.buttonNotation.text = ">"
         
         let hangOutButton = childNode(withName: "hangOutButton") as! Button
         hangOutButton.delegate = self
+        hangOutButton.downName = "buttonDown"
+        hangOutButton.upName = "buttonUp"
         hangOutButton.loadView()
         hangOutButton.buttonNotation.fontName = "Nunito-Black"
     }
@@ -100,6 +100,9 @@ class GameScene: SKScene
     var entities = [GKEntity]()
     var graphs = [String : GKGraph]()
     
+    static let POP_SCALE:CGFloat = 1.0
+    static let SUB_SCALE:CGFloat = 0.92
+    
     private var lastUpdateTime : TimeInterval = 0
     private var label : SKLabelNode?
     private var spinnyNode : SKShapeNode?
@@ -108,8 +111,6 @@ class GameScene: SKScene
     
     private var friendViewSpan: CGFloat = 0.0
     private var selectorIsAnimating = false
-    
-    var friends = loadFriendData()
     
     weak private var slider: SKNode!
     
@@ -126,10 +127,10 @@ class GameScene: SKScene
         if selectorIsAnimating { return }
         let delta = friendViewSpan * CGFloat(focussedFriend - friend)
         let sliderAction = SKAction.moveBy(x: delta, y: 0.0, duration: 0.3)
-        let popUp = SKAction.scale(to: 1.08, duration: 0.2)
-        let popDown = SKAction.scale(to: 1.00, duration: 0.2)
+        let popUp = SKAction.scale(to: GameScene.POP_SCALE, duration: 0.2)
+        let popDown = SKAction.scale(to: GameScene.SUB_SCALE, duration: 0.2)
         let prevFocussed = slider.children[focussedFriend]
-        if prevFocussed.xScale != 1.0
+        if prevFocussed.xScale != GameScene.SUB_SCALE
         {
             prevFocussed.run(popDown)
         }
@@ -139,6 +140,9 @@ class GameScene: SKScene
         slider.run(sliderAction) {[unowned self] in
             self.selectorIsAnimating = false
             self.focussedFriend = friend
+            
+            FriendManager.shared.currentDate = FriendManager.shared.friends[friend]
+            
             newlyFocussed.run(popUp)
         }
     }
@@ -200,6 +204,7 @@ class GameScene: SKScene
         let friendsSorted = friendNodes.sorted { $0.position.x < $1.position.x }
         let lastIndex = friendsSorted.count - 1
         friendViewSpan = friendsSorted[lastIndex].position.x - friendsSorted[lastIndex - 1].position.x
+        var xPos:CGFloat = -600.0
         for friend in friendNodes.enumerated() {
             let ref = friend.element as! SKReferenceNode
             let pos = ref.position
@@ -208,15 +213,14 @@ class GameScene: SKScene
             let friendView = newFriendView?.childNode(withName: "friendView") as! FriendView
             friendView.removeFromParent()
             slider.addChild(friendView)
-            friendView.position = pos
-            let friendRecord = friends[friend.offset]
-            friendView.loadView()
-            friendView.friendName = friendRecord.friendName
-            friendView.moodBar.moodNodeCount = friendRecord.moodBarSize
-            friendView.moodBar.currentMood = friendRecord.barStart
-            print("Loaded: \(friendRecord.friendName)")
-            friendView.dump()
+            friendView.position = CGPoint(x: xPos, y: pos.y)
+            friendView.setScale( friend.offset == 2 ? 1.0 : 0.92)
+            xPos += 300.0
+            let ff = FriendManager.shared.friends[friend.offset]
+            friendView.loadView(withData: ff)
         }
+        
+        FriendManager.shared.currentDate = FriendManager.shared.friends[2]
     }
     
     // MARK: - Date Scene
