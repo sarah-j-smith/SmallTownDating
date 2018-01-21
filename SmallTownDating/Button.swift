@@ -42,7 +42,7 @@ class Button: SKSpriteNode
         }
         else
         {
-            let notation = SKLabelNode(fontNamed: "Nunito-Semibold.ttf")
+            let notation = SKLabelNode(fontNamed: "Nunito-SemiBold")
             addChild(notation)
             notation.verticalAlignmentMode = .center
             notation.horizontalAlignmentMode = .center

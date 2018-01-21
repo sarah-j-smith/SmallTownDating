@@ -12,6 +12,24 @@ import SpriteKit
 class MoodBar: SKSpriteNode
 {
     private var _moodNodeCount: Int = 7
+    private var _currentMood: Int = 3
+    
+    private var defaultColor: UIColor!
+    
+    var currentMood: Int {
+        get {
+            return _currentMood
+        }
+        set {
+            if _currentMood != newValue
+            {
+                let currentNode = moodNodes[_currentMood]
+                currentNode.color = defaultColor
+                let newNode = moodNodes[newValue]
+                newNode.color = UIColor.green
+            }
+        }
+    }
     
     var moodNodeCount: Int {
         get {
@@ -36,5 +54,6 @@ class MoodBar: SKSpriteNode
     
     func loadView()
     {
+        defaultColor = moodNodes.first!.color
     }
 }

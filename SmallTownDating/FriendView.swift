@@ -46,6 +46,8 @@ class FriendView: SKSpriteNode
 {
     static let FRIEND_VIEW_MARGINS = CGSize(width: 25, height: 25)
     
+    weak var moodBar: MoodBar!
+    
     class func createFriendView(withImageName backgroundName: String, friendName: String) -> FriendView
     {
         let friendTexture = SKTexture(imageNamed: backgroundName)
@@ -79,6 +81,9 @@ class FriendView: SKSpriteNode
     {
         characterPortrait = childNode(withName: "portrait") as! SKSpriteNode
         friendNameLabel = childNode(withName: "friendName") as! SKLabelNode
+        
+        moodBar = childNode(withName: "//moodBarFrame") as! MoodBar
+        moodBar.loadView()
     }
 
 }

@@ -9,12 +9,41 @@
 import SpriteKit
 import GameplayKit
 
-extension SKNode {
+protocol Dumpable {
+    var moreInfo: String { get }
+}
+
+extension SKLabelNode: Dumpable
+{
+    var moreInfo: String {
+        get {
+            return text ?? "<EMPTY>"
+        }
+    }
+}
+
+extension SKSpriteNode: Dumpable
+{
+    var moreInfo: String {
+        get {
+            return "(\(position.x), \(position.y)) \(size.width)w x \(size.height)h"
+        }
+    }
+}
+
+extension SKNode
+{
+    func printNamePlusType(withInfo moreInfo: String, indent: Int)
+    {
+        let indentSpace = String(repeating: " ", count: indent)
+        let idString = String(UInt(bitPattern: ObjectIdentifier(self)))
+        print(indentSpace + "\(self.name ?? "Unnamed") \(idString) - \(String(describing: type(of: self))) \(moreInfo)")
+    }
     
     func dump(indent: Int = 0)
     {
-        let indentSpace = String(repeating: " ", count: indent)
-        print(indentSpace + "\(self)")
+        let moreInfo = (self as? Dumpable)?.moreInfo ?? ""
+        printNamePlusType(withInfo: moreInfo, indent: indent)
         for c in children
         {
             c.dump(indent: indent + 4)
@@ -40,6 +69,10 @@ extension GameScene: ButtonResponder
                 select(friendIndex: focussedFriend - 1)
             }
         }
+        else if button.name == "hangOutButton"
+        {
+            moveToDateScene()
+        }
     }
     
     func setupButtons()
@@ -50,12 +83,15 @@ extension GameScene: ButtonResponder
         rightButton.delegate = self
         leftButton.loadView()
         rightButton.loadView()
-        leftButton.buttonNotation.fontName = "Nunito-Semibold.ttf"
-        rightButton.buttonNotation.fontName = "Nunito-Semibold.ttf"
+        leftButton.buttonNotation.fontName = "Nunito-SemiBold"
+        rightButton.buttonNotation.fontName = "Nunito-SemiBold"
         leftButton.buttonNotation.text = "<"
         rightButton.buttonNotation.text = ">"
         
-        self.dump()
+        let hangOutButton = childNode(withName: "hangOutButton") as! Button
+        hangOutButton.delegate = self
+        hangOutButton.loadView()
+        hangOutButton.buttonNotation.fontName = "Nunito-Black"
     }
 }
 
@@ -90,11 +126,20 @@ class GameScene: SKScene
         if selectorIsAnimating { return }
         let delta = friendViewSpan * CGFloat(focussedFriend - friend)
         let sliderAction = SKAction.moveBy(x: delta, y: 0.0, duration: 0.3)
+        let popUp = SKAction.scale(to: 1.08, duration: 0.2)
+        let popDown = SKAction.scale(to: 1.00, duration: 0.2)
+        let prevFocussed = slider.children[focussedFriend]
+        if prevFocussed.xScale != 1.0
+        {
+            prevFocussed.run(popDown)
+        }
+        let newlyFocussed = slider.children[friend]
         sliderAction.timingMode = .easeInEaseOut
         selectorIsAnimating = true
         slider.run(sliderAction) {[unowned self] in
             self.selectorIsAnimating = false
             self.focussedFriend = friend
+            newlyFocussed.run(popUp)
         }
     }
     
@@ -156,10 +201,29 @@ class GameScene: SKScene
         let lastIndex = friendsSorted.count - 1
         friendViewSpan = friendsSorted[lastIndex].position.x - friendsSorted[lastIndex - 1].position.x
         for friend in friendNodes.enumerated() {
-            let friendView = friend.element.childNode(withName: "//friendView") as! FriendView
+            let ref = friend.element as! SKReferenceNode
+            let pos = ref.position
+            ref.removeFromParent()
+            let newFriendView = SKScene(fileNamed: "FriendView")
+            let friendView = newFriendView?.childNode(withName: "friendView") as! FriendView
+            friendView.removeFromParent()
+            slider.addChild(friendView)
+            friendView.position = pos
             let friendRecord = friends[friend.offset]
             friendView.loadView()
             friendView.friendName = friendRecord.friendName
+            friendView.moodBar.moodNodeCount = friendRecord.moodBarSize
+            friendView.moodBar.currentMood = friendRecord.barStart
+            print("Loaded: \(friendRecord.friendName)")
+            friendView.dump()
         }
+    }
+    
+    // MARK: - Date Scene
+    
+    func moveToDateScene()
+    {
+        let dateScene = SKScene(fileNamed: "DatingScene")!
+        view?.presentScene(dateScene, transition: SKTransition.flipHorizontal(withDuration: 0.3))
     }
 }
