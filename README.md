@@ -19,6 +19,6 @@ The concept & planning was a joint effort over 1-2 days of the
 
 ## Concept
 
-The decisions we make socially, who we decide to spend time with, who we date, and who we reject; what if the consequences of those decisions were dramatically real & magnified?
+The decisions we make socially, who we decide to spend time with, who we date, and who we overlook; what if the consequences of those decisions were dramatically real & magnified?
 
 Almost like instead of an enormous sea of people, all just anonymous portraits on our social media & dating apps; suddenly there were only 5 of us?
