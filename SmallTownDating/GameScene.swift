@@ -141,7 +141,7 @@ class GameScene: SKScene
             self.selectorIsAnimating = false
             self.focussedFriend = friend
             
-            FriendManager.shared.currentDate = FriendManager.shared.friends[friend]
+            FriendManager.shared.currentDate = friend
             
             newlyFocussed.run(popUp)
         }
@@ -220,7 +220,7 @@ class GameScene: SKScene
             friendView.loadView(withData: ff)
         }
         
-        FriendManager.shared.currentDate = FriendManager.shared.friends[2]
+        FriendManager.shared.currentDate = 2
     }
     
     // MARK: - Date Scene

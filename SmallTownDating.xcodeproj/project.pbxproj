@@ -30,7 +30,11 @@
 		267370A5201375C900442BFB /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 267370A4201375C900442BFB /* Default-568h@2x.png */; };
 		267370A72014162500442BFB /* DatingScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 267370A62014162500442BFB /* DatingScene.sks */; };
 		267370A9201419E600442BFB /* DatingScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 267370A8201419E600442BFB /* DatingScene.swift */; };
-		267370AC2014221700442BFB /* Perleper.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 267370AB2014221700442BFB /* Perleper.xcassets */; };
+		26DAFD0D20145B78002A21F4 /* Addison.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 26DAFD0C20145B78002A21F4 /* Addison.xcassets */; };
+		26DAFD0F20145BC5002A21F4 /* Robin.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 26DAFD0E20145BC5002A21F4 /* Robin.xcassets */; };
+		26DAFD1120145C0E002A21F4 /* Quinn.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 26DAFD1020145C0E002A21F4 /* Quinn.xcassets */; };
+		26DAFD1320145C97002A21F4 /* Riley.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 26DAFD1220145C97002A21F4 /* Riley.xcassets */; };
+		26DAFD1520145D02002A21F4 /* Joe.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 26DAFD1420145D02002A21F4 /* Joe.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,7 +85,11 @@
 		267370A62014162500442BFB /* DatingScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = DatingScene.sks; sourceTree = "<group>"; };
 		267370A8201419E600442BFB /* DatingScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatingScene.swift; sourceTree = "<group>"; };
 		267370AA20141DDC00442BFB /* Mockup.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Mockup.png; path = ../../HeartBeat_Art/Mockup.png; sourceTree = "<group>"; };
-		267370AB2014221700442BFB /* Perleper.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Perleper.xcassets; sourceTree = "<group>"; };
+		26DAFD0C20145B78002A21F4 /* Addison.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Addison.xcassets; sourceTree = "<group>"; };
+		26DAFD0E20145BC5002A21F4 /* Robin.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Robin.xcassets; sourceTree = "<group>"; };
+		26DAFD1020145C0E002A21F4 /* Quinn.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Quinn.xcassets; sourceTree = "<group>"; };
+		26DAFD1220145C97002A21F4 /* Riley.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Riley.xcassets; sourceTree = "<group>"; };
+		26DAFD1420145D02002A21F4 /* Joe.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Joe.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -179,7 +187,11 @@
 				260ECEA52012FE4600E4660D /* Assets.xcassets */,
 				2673709F20135CB500442BFB /* Nunito-SemiBold.ttf */,
 				2673709D20135C7100442BFB /* Nunito-Black.ttf */,
-				267370AB2014221700442BFB /* Perleper.xcassets */,
+				26DAFD0C20145B78002A21F4 /* Addison.xcassets */,
+				26DAFD0E20145BC5002A21F4 /* Robin.xcassets */,
+				26DAFD1020145C0E002A21F4 /* Quinn.xcassets */,
+				26DAFD1220145C97002A21F4 /* Riley.xcassets */,
+				26DAFD1420145D02002A21F4 /* Joe.xcassets */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -302,8 +314,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				2673709920133BD700442BFB /* FriendView.sks in Resources */,
-				267370AC2014221700442BFB /* Perleper.xcassets in Resources */,
 				260ECE7B2012EE1300E4660D /* Main.storyboard in Resources */,
+				26DAFD0D20145B78002A21F4 /* Addison.xcassets in Resources */,
 				260ECE722012EE1200E4660D /* GameScene.sks in Resources */,
 				267370A320135E5B00442BFB /* Button.sks in Resources */,
 				267370A5201375C900442BFB /* Default-568h@2x.png in Resources */,
@@ -311,9 +323,13 @@
 				267370A020135CB500442BFB /* Nunito-SemiBold.ttf in Resources */,
 				2673709B2013432600442BFB /* FriendData.plist in Resources */,
 				260ECE802012EE1300E4660D /* LaunchScreen.storyboard in Resources */,
+				26DAFD0F20145BC5002A21F4 /* Robin.xcassets in Resources */,
+				26DAFD1120145C0E002A21F4 /* Quinn.xcassets in Resources */,
 				260ECE742012EE1200E4660D /* Actions.sks in Resources */,
 				260ECEA62012FE4600E4660D /* Assets.xcassets in Resources */,
+				26DAFD1520145D02002A21F4 /* Joe.xcassets in Resources */,
 				2673709E20135C7100442BFB /* Nunito-Black.ttf in Resources */,
+				26DAFD1320145C97002A21F4 /* Riley.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -45,12 +45,14 @@ class DatingScene: SKScene
         
         resultsFrame = childNode(withName: "dateResultFrame") as! SKSpriteNode
         let dateTitle = resultsFrame.childNode(withName: "dateTitle") as! SKLabelNode
-        let dateResult = resultsFrame.childNode(withName: "dateResult") as! SKLabelNode
-        
+        let dateResult1 = resultsFrame.childNode(withName: "dateResult1") as! SKLabelNode
+        let dateResult2 = resultsFrame.childNode(withName: "dateResult2") as! SKLabelNode
+        let dateResult3 = resultsFrame.childNode(withName: "dateResult3") as! SKLabelNode
+
         resultsFrame.setScale(0.01)
         
-        let currentDate = FriendManager.shared.currentDate
-        FriendManager.shared.hangOut(person: currentDate!)
+        let fm = FriendManager.shared
+        fm.hangOut()
         let rand = GKRandomSource.sharedRandom()
         let pissedFriends = FriendManager.shared.getPissedOffFriends()
         let chanceToCrash = Double( rand.nextInt(upperBound: 1000) ) / 1000.0
@@ -61,19 +63,28 @@ class DatingScene: SKScene
             if chanceToCrash > DatingScene.CRASH_CHANCE
             {
                 dateTitle.text = "Distrously!"
-                dateResult.text = "\(pissedFriend) crashed your evening!"
+                dateResult1.text = "\(pissedFriend) crashed"
+                dateResult2.text = "your evening!"
+                dateResult3.text = ""
+                
+                let fm = FriendManager.shared
+                fm.friends[ fm.currentDate ].hearts = 0
             }
             else
             {
-                dateTitle.text = "Pretty well"
-                dateResult.text = "Fun was had but \(pissedFriends.count) of your friends are unhappy including \(pissedFriend)"
+                dateTitle.text = "Just fine"
+                dateResult1.text = "Fun was had but"
+                dateResult2.text = "\(pissedFriends.count) of your friends"
+                dateResult3.text = "are unhappy including \(pissedFriend)"
             }
         }
         else
         {
-            let fnd = FriendManager.shared.currentDate!
+            let fnd = FriendManager.shared.friends[ FriendManager.shared.currentDate ].friendName
             dateTitle.text = "Great!"
-            dateResult.text = "\(fnd.friendName) and you hung out & had fun!"
+            dateResult1.text = "\(fnd) and you"
+            dateResult2.text = "hung out & had fun!"
+            dateResult3.text = ""
         }
         let popAction = SKAction.scale(to: 1.2, duration: 0.4)
         let popBack = SKAction.scale(to: 1.0, duration: 0.1)
@@ -85,8 +96,12 @@ class DatingScene: SKScene
         let dateTitleFrame = childNode(withName: "dateTitleFrame")!
         let resultTitle = dateTitleFrame.childNode(withName: "//dateTitle") as! SKLabelNode
         resultTitle.fontName = "Nunito-Black"
-        let resultResults = dateTitleFrame.childNode(withName: "//dateResult") as! SKLabelNode
-        resultResults.fontName = "Nunito-SemiBold"
+        let resultResults1 = dateTitleFrame.childNode(withName: "//dateResult1") as! SKLabelNode
+        let resultResults2 = dateTitleFrame.childNode(withName: "//dateResult2") as! SKLabelNode
+        let resultResults3 = dateTitleFrame.childNode(withName: "//dateResult3") as! SKLabelNode
+        resultResults1.fontName = "Nunito-SemiBold"
+        resultResults2.fontName = "Nunito-SemiBold"
+        resultResults3.fontName = "Nunito-SemiBold"
     }
     
     func moveToGameScene()

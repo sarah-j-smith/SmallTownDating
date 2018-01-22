@@ -2,8 +2,6 @@
 
 ![Tiny Town Dating](tiny-town-dating.gif)
 
-![via s3](https://s3-ap-southeast-2.amazonaws.com/smithsoft-public/tiny-town-dating.gif)
-
 ## Gentle Flowers Studio jam at Heartbeat
 
 >> You have to balance and upkeep

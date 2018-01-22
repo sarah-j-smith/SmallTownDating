@@ -78,7 +78,7 @@ class FriendView: SKSpriteNode
     
     private weak var friendNameLabel: SKLabelNode!
     private weak var characterPortrait: SKSpriteNode!
- 
+    
     func loadView(withData friendData: FriendData)
     {
         characterPortrait = childNode(withName: "portrait") as! SKSpriteNode
@@ -91,11 +91,14 @@ class FriendView: SKSpriteNode
         moodBar.moodNodeCount = friendData.moodBarSize
         moodBar.currentMood = friendData.barStart
         
-        let portraitName = "cardCharacterPerlerper000\(friendData.barStart)"
+        let portraitIndex = max(friendData.barStart + 1, 5)
+        let portraitName = FriendData.CHARATER_IMAGE_FOR_NAME[ friendData.friendName ]! + "\(portraitIndex)"
         let tex = SKTexture(imageNamed: portraitName)
         print("Tex sz: \(tex.size())")
         //portrait = tex
         characterPortrait.texture = tex
+        
+        setHeart(score: friendData.hearts)
     }
 
 }
